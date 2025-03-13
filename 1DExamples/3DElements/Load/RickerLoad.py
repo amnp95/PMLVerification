@@ -1,21 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
-
-# Set PGF as the backend for LaTeX-compatible figures
-# plt.rcParams.update({
-#     "text.usetex": True,  # Enable LaTeX
-#     "font.family": "serif",
-#     "font.serif": ["Times"],  # Match LaTeX's Times New Roman style
-#     "axes.labelsize": 12,  # Match LaTeX font sizes
-#     "axes.titlesize": 14,
-#     "legend.fontsize": 10,
-#     "xtick.labelsize": 10,
-#     "ytick.labelsize": 10,
-#     "grid.linestyle": "--",
-#     "grid.alpha": 0.7,
-#     "figure.figsize": (6, 4),  # Matches the LaTeX plot size
-#     "pgf.rcfonts": False,  # Ensure consistent font rendering
-# })
+import os 
+os.chdir(os.path.dirname(os.path.abspath(__file__)))  # Set the working directory to the script's location
 
 def ricker_pulse(t, A_ricker=100e3, f_ricker=5, t0=1.0):
     """
