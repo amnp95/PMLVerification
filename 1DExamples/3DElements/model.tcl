@@ -2,7 +2,9 @@ model BasicBuilder -ndm 3 -ndf 3
 
 
 # define nodes
+set Verbose 0;
 set Verbose 1;
+
 set USEPML 0;
 set LX 50;
 set LY 1.0;
@@ -156,7 +158,7 @@ if {$Verbose} {
 }
 
 set tsTag 1;
-timeSeries Path $tsTag -fileTime "LoadTime.txt" -filePath "LoadForce.txt" 
+timeSeries Path $tsTag -fileTime "Load/LoadTime.txt" -filePath "Load/LoadForce.txt" 
 
 pattern Plain $patternTag $tsTag -fact $cFactor {
     foreach nodeTag $CornerNodes {
